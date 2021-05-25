@@ -12,5 +12,5 @@ app.use(cors());
 app.use('/api', routes);
 
 app.listen(6000, () => {
-    console.log(`Listening to port 5000`);
+    console.log(`Listening to port 6000`);
 });
