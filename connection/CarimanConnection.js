@@ -106,7 +106,7 @@ module.exports.getSearch = async(param)=>{
             OPTIONAL {?sub data:sub ?subID.}
             OPTIONAL {?subID data:subKategori ?subKategori.}
             FILTER REGEX(?nama, "${param.search ? param.search : ''}", "i")
-        }  UNION {
+        } UNION {
             ?sub rdf:type data:tanaman
             OPTIONAL {?sub data:id ?id.}
             OPTIONAL {?sub data:nama ?nama.}
