@@ -105,7 +105,7 @@ module.exports.getSearch = async(param)=>{
             OPTIONAL {?warnaID data:warnaBunga ?warnaBunga.}
             OPTIONAL {?sub data:sub ?subID.}
             OPTIONAL {?subID data:subKategori ?subKategori.}
-            FILTER REGEX(?kategoriName, "${param.search ? param.search : ''}", "i")
+            FILTER REGEX(?nama, "${param.search ? param.search : ''}", "i")
         }  UNION {
             ?sub rdf:type data:tanaman
             OPTIONAL {?sub data:id ?id.}
@@ -119,7 +119,7 @@ module.exports.getSearch = async(param)=>{
             OPTIONAL {?warnaID data:warnaBunga ?warnaBunga.}
             OPTIONAL {?sub data:sub ?subID.}
             OPTIONAL {?subID data:subKategori ?subKategori.}
-            FILTER REGEX(?subKategori, "${param.search ? param.search : ''}", "i")
+            FILTER REGEX(?kategoriName, "${param.search ? param.search : ''}", "i")
         } UNION {
             ?sub rdf:type data:tanaman
             OPTIONAL {?sub data:id ?id.}
@@ -133,7 +133,7 @@ module.exports.getSearch = async(param)=>{
             OPTIONAL {?warnaID data:warnaBunga ?warnaBunga.}
             OPTIONAL {?sub data:sub ?subID.}
             OPTIONAL {?subID data:subKategori ?subKategori.}
-            FILTER REGEX(?nama, "${param.search ? param.search : ''}", "i")
+            FILTER REGEX(?subKategori, "${param.search ? param.search : ''}", "i")
         } UNION {
             ?sub rdf:type data:tanaman
             OPTIONAL {?sub data:id ?id.}
