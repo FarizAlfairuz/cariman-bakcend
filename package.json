@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Back End semantik",
   "main": "app.js",
+  "engines": {
+    "node": "12.16.0"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "cors": "^2.8.5",
