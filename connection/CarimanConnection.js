@@ -26,12 +26,15 @@ module.exports.getCariman = async(param)=>{
             OPTIONAL {?kategoriID data:kategoriName ?kategoriName.}
             OPTIONAL {?sub data:warna ?warnaID.}
             OPTIONAL {?warnaID data:warnaBunga ?warnaBunga.}
+            OPTIONAL {?sub data:sub ?subID.}
+            OPTIONAL {?subID data:subKategori ?subKategori.}
             FILTER regex(?nama, "${param.nama ? param.nama : ''}", "i")
             FILTER regex(?id, "${param.id ? param.id : ''}", "i")
             FILTER regex(?kategoriName, "${param.kategori ? param.kategori : ''}", "i")
             FILTER regex(?nama_ilmiah, "${param.nama_ilmiah ? param.nama_ilmiah : ''}", "i")
             FILTER regex(?deskripsi, "${param.deskripsi ? param.deskripsi : ''}", "i")
             FILTER regex(?warnaBunga, "${param.warna ? param.warna : ''}", "i")
+            FILTER regex(?subKategori, "${param.sub ? param.sub : ''}", "i")
         }`
     
     };
@@ -65,6 +68,8 @@ module.exports.getSuggestion = async(param)=>{
             OPTIONAL {?kategoriID data:kategoriName ?kategoriName.}
             OPTIONAL {?sub data:warna ?warnaID.}
             OPTIONAL {?warnaID data:warnaBunga ?warnaBunga.}
+            OPTIONAL {?sub data:sub ?subID.}
+            OPTIONAL {?subID data:subKategori ?subKategori.}
         FILTER regex(?kategoriName, "${param.kategori ? param.kategori : ''}", "i")
     } ORDER BY RAND() LIMIT 5`
     };
@@ -98,6 +103,22 @@ module.exports.getSearch = async(param)=>{
             OPTIONAL {?kategoriID data:kategoriName ?kategoriName.}
             OPTIONAL {?sub data:warna ?warnaID.}
             OPTIONAL {?warnaID data:warnaBunga ?warnaBunga.}
+            OPTIONAL {?sub data:sub ?subID.}
+            OPTIONAL {?subID data:subKategori ?subKategori.}
+            FILTER REGEX(?subKategori, "${param.search ? param.search : ''}", "i")
+        }  UNION {
+            ?sub rdf:type data:tanaman
+            OPTIONAL {?sub data:id ?id.}
+            OPTIONAL {?sub data:nama ?nama.}
+            OPTIONAL {?sub data:kategori ?kategoriID.}
+            OPTIONAL {?sub data:nama_ilmiah ?nama_ilmiah.}
+            OPTIONAL {?sub data:urlFoto ?urlFoto.}
+            OPTIONAL {?sub data:deskripsi ?deskripsi.}
+            OPTIONAL {?kategoriID data:kategoriName ?kategoriName.}
+            OPTIONAL {?sub data:warna ?warnaID.}
+            OPTIONAL {?warnaID data:warnaBunga ?warnaBunga.}
+            OPTIONAL {?sub data:sub ?subID.}
+            OPTIONAL {?subID data:subKategori ?subKategori.}
             FILTER REGEX(?nama, "${param.search ? param.search : ''}", "i")
         } UNION {
             ?sub rdf:type data:tanaman
@@ -110,6 +131,8 @@ module.exports.getSearch = async(param)=>{
             OPTIONAL {?kategoriID data:kategoriName ?kategoriName.}
             OPTIONAL {?sub data:warna ?warnaID.}
             OPTIONAL {?warnaID data:warnaBunga ?warnaBunga.}
+            OPTIONAL {?sub data:sub ?subID.}
+            OPTIONAL {?subID data:subKategori ?subKategori.}
             FILTER REGEX(?kategoriName, "${param.search ? param.search : ''}", "i")
         } UNION {
             ?sub rdf:type data:tanaman
@@ -122,6 +145,8 @@ module.exports.getSearch = async(param)=>{
             OPTIONAL {?kategoriID data:kategoriName ?kategoriName.}
             OPTIONAL {?sub data:warna ?warnaID.}
             OPTIONAL {?warnaID data:warnaBunga ?warnaBunga.}
+            OPTIONAL {?sub data:sub ?subID.}
+            OPTIONAL {?subID data:subKategori ?subKategori.}
             FILTER REGEX(?warnaBunga, "${param.search ? param.search : ''}", "i")
         }  UNION {
             ?sub rdf:type data:tanaman
@@ -134,6 +159,8 @@ module.exports.getSearch = async(param)=>{
             OPTIONAL {?kategoriID data:kategoriName ?kategoriName.}
             OPTIONAL {?sub data:warna ?warnaID.}
             OPTIONAL {?warnaID data:warnaBunga ?warnaBunga.}
+            OPTIONAL {?sub data:sub ?subID.}
+            OPTIONAL {?subID data:subKategori ?subKategori.}
             FILTER REGEX(?nama_ilmiah, "${param.search ? param.search : ''}", "i")
         }
     }`

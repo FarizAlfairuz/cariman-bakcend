@@ -402,3 +402,90 @@ data:12 data:warna data:warna2 .
 data:12 data:warna data:warna3 .
 data:12 data:warna data:warna5 .
 data:13 data:warna data:warna3 .
+data:14 data:warna data:warna5 .
+data:15 data:warna data:warna5 .
+data:16 data:warna data:warna5 .
+data:17 data:warna data:warna5 .
+data:18 data:warna data:warna5 .
+data:19 data:warna data:warna5 .
+data:20 data:warna data:warna5 .
+data:21 data:warna data:warna5 .
+data:22 data:warna data:warna5 .
+data:23 data:warna data:warna5 .
+data:24 data:warna data:warna5 .
+data:25 data:warna data:warna5 .
+data:26 data:warna data:warna5 .
+data:27 data:warna data:warna5 .
+data:28 data:warna data:warna5 .
+data:29 data:warna data:warna5 .
+data:30 data:warna data:warna5 .
+data:31 data:warna data:warna5 .
+data:32 data:warna data:warna5 .
+data:33 data:warna data:warna5 .
+data:34 data:warna data:warna5 .
+data:35 data:warna data:warna5 .
+data:36 data:warna data:warna5 .
+data:37 data:warna data:warna5 .
+data:38 data:warna data:warna5 .
+data:39 data:warna data:warna5 .
+data:40 data:warna data:warna5 .
+
+data:sub1 rdf:type data:sub;
+data:subKategori "Bunga" .
+data:sub2 rdf:type data:sub;
+data:subKategori "Buah" .
+data:sub3 rdf:type data:sub;
+data:subKategori "Pohon" .
+data:sub4 rdf:type data:sub;
+data:subKategori "Daun" .
+data:sub5 rdf:type data:sub;
+data:subKategori "Kacang" .
+data:sub6 rdf:type data:sub;
+data:subKategori "Umbi" .
+
+data:1 data:sub data:sub1 .
+data:2 data:sub data:sub1 .
+data:3 data:sub data:sub1 .
+data:4 data:sub data:sub1 .
+data:5 data:sub data:sub1 .
+data:6 data:sub data:sub1 .
+data:7 data:sub data:sub1 .
+data:8 data:sub data:sub1 .
+data:9 data:sub data:sub1 .
+data:10 data:sub data:sub1 .
+data:11 data:sub data:sub1 .
+data:12 data:sub data:sub1 .
+data:13 data:sub data:sub1 .
+data:14 data:sub data:sub3 .
+data:15 data:sub data:sub1 .
+data:16 data:sub data:sub2 .
+data:17 data:sub data:sub4 .
+data:18 data:sub data:sub3 .
+data:19 data:sub data:sub2 .
+data:20 data:sub data:sub3 .
+data:21 data:sub data:sub2 .
+data:22 data:sub data:sub2 .
+data:23 data:sub data:sub2 .
+data:23 data:sub data:sub1 .
+data:24 data:sub data:sub2 .
+data:25 data:sub data:sub2 .
+data:26 data:sub data:sub3 .
+data:26 data:sub data:sub2 .
+data:27 data:sub data:sub3 .
+data:27 data:sub data:sub2 .
+data:28 data:sub data:sub3 .
+data:28 data:sub data:sub2 .
+data:29 data:sub data:sub3 .
+data:29 data:sub data:sub2 .
+data:30 data:sub data:sub2 .
+data:31 data:sub data:sub2 .
+data:32 data:sub data:sub2 .
+data:32 data:sub data:sub3 .
+data:33 data:sub data:sub2 .
+data:34 data:sub data:sub3 .
+data:35 data:sub data:sub3 .
+data:36 data:sub data:sub3 .
+data:37 data:sub data:sub5 .
+data:38 data:sub data:sub5 .
+data:39 data:sub data:sub5 .
+data:40 data:sub data:sub6 .
