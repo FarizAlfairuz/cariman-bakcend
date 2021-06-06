@@ -111,8 +111,18 @@ module.exports.getSearch = async(param)=>{
             OPTIONAL {?sub data:urlFoto ?urlFoto.}
             OPTIONAL {?sub data:deskripsi ?deskripsi.}
             OPTIONAL {?kategoriID data:kategoriName ?kategoriName.}
+            FILTER REGEX(?warnaBunga, "${param.search ? param.search : ''}", "i")
+        }  UNION {
+            ?sub rdf:type data:tanaman
+            OPTIONAL {?sub data:id ?id.}
+            OPTIONAL {?sub data:nama ?nama.}
+            OPTIONAL {?sub data:kategori ?kategoriID.}
+            OPTIONAL {?sub data:nama_ilmiah ?nama_ilmiah.}
+            OPTIONAL {?sub data:urlFoto ?urlFoto.}
+            OPTIONAL {?sub data:deskripsi ?deskripsi.}
+            OPTIONAL {?kategoriID data:kategoriName ?kategoriName.}
             FILTER REGEX(?nama_ilmiah, "${param.search ? param.search : ''}", "i")
-        } 
+        }
     }`
     };
     try{
