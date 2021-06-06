@@ -466,7 +466,6 @@ data:20 data:sub data:sub3 .
 data:21 data:sub data:sub2 .
 data:22 data:sub data:sub2 .
 data:23 data:sub data:sub2 .
-data:23 data:sub data:sub1 .
 data:24 data:sub data:sub2 .
 data:25 data:sub data:sub2 .
 data:26 data:sub data:sub3 .
