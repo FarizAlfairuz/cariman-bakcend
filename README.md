@@ -21,7 +21,8 @@ Kita perlu menginstall dependency package agar server dapat berjalan dengan menj
 ### `node app`
 
 Jalankan aplikasi dalam development mode dengan cara mejalankan command `node app`\
-Website akan berjalan pada port [http://localhost:5000](http://localhost:5000). [http://localhost:5000](http://localhost:5000) digunakan untuk melihat website tersebut secara lokal, tampilan yang muncul adalah dalam bentuk JSON.
+Website akan berjalan pada port [http://localhost:5000](http://localhost:5000).\
+[http://localhost:5000](http://localhost:5000) digunakan untuk melihat website tersebut secara lokal, tampilan yang muncul adalah dalam bentuk JSON.
 
 ### `fuseki-server`
 
